@@ -5,11 +5,6 @@ body {
   background-attachment: fixed;
   background-position: 100% top;
   background-color: black;
-  opacity: 0.7;
-}
-
-header {
-  width: 100%;
 }
 
 .logo {
@@ -17,14 +12,15 @@ header {
   left: 4.90em;
   top: 4.75em;
 }
-
+/* Hamburger menu styles */
 .hamburger-menu {
     position: relative;
     float: right;
-    height: 4em;
-    width: 2.5em;
+    height: 3em;
+    width: 1.7em;
     cursor: pointer;
-    margin-right: 2em;
+    right: 2em;
+    top: 3em;
 }
 
 .line {
@@ -33,14 +29,38 @@ header {
   width: 100%;
   background-color: white;
   border-radius: 10px;
+  transition: all 0.2s ease;
 }
-.line01 {
+/* styles for hamburger menu when not clicked*/
+.top {
   top: 30%;
 }
 
-.line02 {
+.middle {
+  top: 49%;
+  background-color: orange;
+}
+.bottom {
+  top: 69%;
+}
+
+/* styles for hamburger menu when clicked*/
+.hamburger-menu.close .top {
+  transform: rotate(45deg);
   top: 49%;
 }
-.line03 {
-  top: 69%;
+
+.hamburger-menu.close .middle, .hamburger-menu.close .bottom {
+  transform: rotate(-45deg);
+  top: 49%;
+}
+/*page content*/
+
+main {
+  display: flex;
+  
+}
+
+.number {
+  color: white;
 }
