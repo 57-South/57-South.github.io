@@ -50,38 +50,35 @@
 /******/
 /******************Boxes********************/
 .box-container{
-  width: 100vw;
+/*  width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-auto-rows: 300px;
-}
-
-.box{
-  background-color: green;
-  width: 34%;
+  grid-auto-rows: 300px;*/
+  overflow-x: hidden;
 }
 
 .text{
   position: relative;
   color: white;
   left:59px;
-  width: inherit;
+  bottom: 115px;
+  z-index: 0;
 }
 
 .title{
-  bottom: 70px;
   font-size: 22px;
   font-family: DIN-Bold;
 }
 
 .by-line{
   font-size: 12px;
-  bottom: 55px;
   font-family: DIN-Regular;
+  bottom: 130px;
 }
 
 .overlay{
+  z-index: 1;
   background-color: #616161;
   width: 100%;
   height: 100%;
@@ -106,13 +103,18 @@
 
 
 /*Media Queries*/
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1367px) and (max-width: 1920px){
+  .navigation{
+    height: 50px;
+    font-size: 23px;
+  }
   .box-container{
     grid-template-columns: repeat(4,1fr);
     grid-auto-rows: 400px;
   }
   .box{
     width: 25vw;
+    height: 400px;
   }
 }
 
@@ -123,7 +125,8 @@
     grid-auto-rows: 350px;
   }
   .box{
-    width: 100%;
+    width: 33.33vw;
+    height: 350px;
   }
 }
 /****Less Then 750px****/
@@ -144,7 +147,8 @@
     grid-auto-rows: 300px;
   }
   .box{
-    width: 100%;
+    width: 50vw;
+    height: 300px;
   }
 }
 @media screen and (max-width: 540px) {
@@ -155,6 +159,7 @@
   }
   .box{
     width: 100vw;
+    height: 300px;
   }
 }
 
