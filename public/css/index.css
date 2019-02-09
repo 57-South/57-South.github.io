@@ -1,17 +1,49 @@
-body {
-  background-image: url("../img/background-image.png");
-  background-size: 100% 100%;
+@font-face {
+  font-family: DIN-webfont;
+  src: url('./fonts/DIN-webfont/d-dincondensed-webfont.woff2');
+  src: url('./fonts/DIN-webfont/d-dincondensed-webfont.woff2');
+
+}
+
+
+
+
+body, #slider, .wrap, .slide-content {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 100% top;
+  background-position: center;
+  overflow: hidden;
+}
+
+.slide1 {
+  background-image: url("../img/background-image.png");
   background-color: black;
+}
+.slide2 {
+  background-image: url("../img/img1.jpg");
+}
+.slide3 {
+  background-image: url("../img/img2.jpg");
 }
 
 .logo {
-  position: absolute;
+  position: relative;
   left: 4.90em;
   top: 4.75em;
+  z-index: 1;
 }
+
 /* Hamburger menu styles */
 .hamburger-menu {
     position: relative;
@@ -19,8 +51,9 @@ body {
     height: 3em;
     width: 1.7em;
     cursor: pointer;
-    right: 2em;
+    right: 4em;
     top: 3em;
+    z-index: 1;
 }
 
 .line {
@@ -56,11 +89,80 @@ body {
 }
 /*page content*/
 
-main {
-  display: flex;
-  
+.slide-content {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  position: relative;
+  justify-content: right;
+  right: 5em;
+  bottom: 4em;
+}
+
+.wrapper {
+  position: relative;
+  grid-row: 3 / span 1;
+  width: 4.375em;
+  left: 28em;
 }
 
 .number {
   color: white;
+  font-size: 4.500em;
+  position: relative;
+  /*opacity: 0.2;*/
+  /*margin-left: 7em;*/
+  font-family: DIN-webfont;
+}
+
+.arrows {
+  color: white;
+  height: 1em;
+  width: 2em;
+  position: absolute;
+  top: 8em;
+  left: 20%;
+}
+
+.fa-angle-right {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.fa-angle-left {
+  cursor: pointer;
+}
+
+
+.wrapper-2 {
+  grid-row: 4;
+  position: relative;
+  bottom: 4em;
+}
+
+.Brand {
+  color: white;
+  grid-row: 4;
+  font-size: 4.500em;
+  font-family: DIN-webfont;
+  text-transform: uppercase;
+}
+
+.underline{
+  border: 2px solid red;
+  width: 8em;
+  position: absolute;
+  right: 0;
+  top: 10em;
+  border-radius: 4px;
+}
+
+.sub-text {
+  color: white;
+  font-family: DIN-webfont;
+  font-size: 1.125em;
+  position: absolute;
+  top: 10em;
+  right: 0;
 }
