@@ -1,101 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>57 South Home</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <!-- Script -->
+    <script
+    			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+    			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    			  crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="../js/main.js" async></script>
-</head>
-<body>
-  <div class="wrap">
-  <div id="slider">
-    <div class="slide slide1">
+
+            </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <div class="navigation">
       <div class="logo">
-      <img src="../img/logo.svg" alt="57 Souths logo" class"57-south-logo">
+      <img src="./img/logo.svg" alt="57 Souths logo" class"57-south-logo">
       </div>
         <div class="hamburger-menu">
           <span class="line top"></span>
           <span class="line middle"></span>
           <span class="line bottom"></span>
-      </div>
-      <div class="slide-content">
-        <div class="wrapper">
-        <h1 class="number">01</h1>
-        <div class="arrows">
-        <i class="fas fa-angle-left"></i>
-        <i class="fas fa-angle-right"></i>
-        </div>
-        </div>
-        <div class="wrapper-2">
-          <h1 class="Brand">
-            Brand & Strategy
-          </h1>
-          <div class="underline"></div>
-          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
-          </div>
-      </div>
-    </div>
-    <div class="slide slide2">
-      <div class="logo">
-      <img src="../img/logo.svg" alt="57 Souths logo" class"57-south-logo">
-      </div>
-        <div class="hamburger-menu">
-          <span class="line top"></span>
-          <span class="line middle"></span>
-          <span class="line bottom"></span>
-      </div>
-      <div class="slide-content">
-        <div class="wrapper">
-        <h1 class="number">02</h1>
-        <div class="arrows">
-        <i class="fas fa-angle-left"></i>
-        <i class="fas fa-angle-right"></i>
-        </div>
-        </div>
-        <div class="wrapper-2">
-          <h1 class="Brand">
-            Brand & Strategy
-          </h1>
-          <div class="underline"></div>
-          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
-          </div>
-      </div>
-    </div>
-    <div class="slide slide3">
-      <div class="logo">
-      <img src="../img/logo.svg" alt="57 Souths logo" class"57-south-logo">
-      </div>
-        <div class="hamburger-menu">
-          <span class="line top"></span>
-          <span class="line middle"></span>
-          <span class="line bottom"></span>
-      </div>
-      <div class="slide-content">
-        <div class="wrapper">
-        <h1 class="number">03</h1>
-        <div class="arrows">
-        <i class="fas fa-angle-left"></i>
-        <i class="fas fa-angle-right"></i>
-        </div>
-        </div>
-        <div class="wrapper-2">
-          <h1 class="Brand">
-            Brand & Strategy
-          </h1>
-          <div class="underline"></div>
-          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
-          </div>
       </div>
     </div>
 
-  </div>
-  </div>
-</body>
+    <!-- Slider Wrapper -->
+    <div class="css-slider-wrapper">
+      <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+      <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+      <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+      <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+
+      <!-- Slider Pagination -->
+      <div class="slider-pagination">
+        <label for="slider_1" class="page1"></label>
+        <label for="slider_2" class="page2"></label>
+        <label for="slider_3" class="page3"></label>
+        <label for="slider_4" class="page4"></label>
+      </div>
+
+      <!-- Slider #1 -->
+      <div class="slider slide-1">
+        <img src="./img/background-image.png" alt="">
+        <div class="slider-content">
+          <h4 class="number">01</h4>
+          <div class="arrows">
+          <i class="fas fa-angle-left"></i>
+          <i class="fas fa-angle-right"></i>
+          </div>
+          <h2 class="brand">Brand & Strategy</h2>
+          <div class="underline"></div>
+          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
+        </div>
+      </div>
+
+      <!-- Slider #2 -->
+      <div class="slider slide-2">
+        <img src="./img/img1.jpg" alt="">
+        <div class="slider-content">
+          <h4 class="number">02</h4>
+          <div class="arrows">
+          <i class="fas fa-angle-left"></i>
+          <i class="fas fa-angle-right"></i>
+          </div>
+          <h2 class="brand">Brand & Strategy</h2>
+          <div class="underline"></div>
+          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
+        </div>
+      </div>
+
+      <!-- Slider #3 -->
+      <div class="slider slide-3">
+        <img src="./img/img2.jpg" alt="">
+        <div class="slider-content">
+          <h4 class="number">03</h4>
+          <div class="arrows">
+          <i class="fas fa-angle-left"></i>
+          <i class="fas fa-angle-right"></i>
+          </div>
+          <h2 class="brand">Brand & Strategy</h2>
+          <div class="underline"></div>
+          <p class="sub-text">From the east coast to Kilkata India, nunc id <br> cursus metus aliquam eleifend.</p>
+        </div>
+      </div>
+
+      <!-- Slider #4 -->
+      <div class="slider slide-4">
+        <img src="images/model-4.png" alt="">
+        <div class="slider-content">
+          <h4>New Product</h4>
+          <h2>Denim Longline T-Shirt Dress With Split</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="../js/main.js" charset="utf-8"></script>
+  </body>
+
 </html>
