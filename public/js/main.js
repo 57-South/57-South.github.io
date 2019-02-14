@@ -6,10 +6,10 @@ hamburgerMenu.click( function () {
 });
 
 //slider
-var TIMEOUT = 6000;
+//var TIMEOUT = 6000;
 
 
-var interval = setInterval(handleNext, TIMEOUT);
+//var interval = setInterval(handleNext, TIMEOUT);
 
 function handleNext() {
 
@@ -38,3 +38,31 @@ function handleNext() {
   }
 
 }
+
+ function handlePrevious () {
+   var $radios = $('input[class*="slide-radio"]');
+   var $activeRadio = $('input[class*="slide-radio"]:checked');
+
+   var currentIndex = $activeRadio.index();
+   var radiosLength = $radios.length;
+
+   $radios
+     .attr('checked', false);
+
+     if (currentIndex <= radiosLength) {
+       $radios
+        .first()
+        .attr('checked', true);
+     }
+      else {
+
+     }
+
+
+};
+
+const arrowLeft = $('.fa-angle-left');
+const arrowRight = $('.fa-angle-right');
+
+arrowRight.click(handleNext);
+arrowLeft.click(handlePrevious);
