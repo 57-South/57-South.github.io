@@ -49,14 +49,16 @@ function handleNext() {
    $radios
      .attr('checked', false);
 
-     if (currentIndex <= radiosLength) {
+      if (currentIndex < radiosLength - 1) {
        $radios
         .first()
         .attr('checked', true);
+     } else {
+       $radios
+       .prev()
+       .attr('checked', true)
      }
-      else {
 
-     }
 
 
 };
