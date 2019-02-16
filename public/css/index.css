@@ -257,7 +257,7 @@ body {
 }
 
 /* Slider Pagger */
-.slider-pagination {
+/* .slider-pagination {
   position: absolute;
   bottom: 30px;
   width: 575px;
@@ -274,17 +274,17 @@ body {
   background: #fff;
   margin: 0 10px;
   cursor: pointer;
-}
+} */
 
 /* Slider Pagger Event */
-.slide-radio1:checked ~ .slider-pagination .page1,
+/* .slide-radio1:checked ~ .slider-pagination .page1,
 .slide-radio2:checked ~ .slider-pagination .page2,
 .slide-radio3:checked ~ .slider-pagination .page3 {
   width: 14px;
   height: 14px;
   border: 2px solid #ea2e49;
   background: transparent;
-}
+} */
 
 /* Slider Slide Effect */
 .slide-radio1:checked ~ .slider {
