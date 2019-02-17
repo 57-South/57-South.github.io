@@ -1,0 +1,1021 @@
+@font-face {
+  font-family: DIN-webfont;
+  src: url('./fonts/DIN-webfont/d-dincondensed-webfont.woff2');
+  src: url('./fonts/DIN-webfont/d-dincondensed-webfont.woff2');
+
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation */
+.navigation {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  left: 4.90em;
+  top: 4.75em;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    position: absolute;
+    float: right;
+    height: 3em;
+    width: 1.7em;
+    cursor: pointer;
+    right: 4em;
+    top: 3em;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+/* styles for hamburger menu when not clicked*/
+.top {
+  top: 30%;
+}
+
+.middle {
+  top: 49%;
+  background-color: #F46F32;
+}
+.bottom {
+  top: 69%;
+}
+
+/* styles for hamburger menu when clicked*/
+.hamburger-menu.close .top {
+  transform: rotate(45deg);
+  top: 49%;
+}
+
+.hamburger-menu.close .middle, .hamburger-menu.close .bottom {
+  transform: rotate(-45deg);
+  top: 49%;
+}
+
+
+/* Slider wrapper*/
+.css-slider-wrapper {
+  display: block;
+  background: #FFF;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 0;
+  -webkit-transition: -webkit-transform 1600ms;
+  transition: -webkit-transform 1600ms, transform 1600ms;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Slides Background Color */
+.slide-1 {
+  background: black;
+  left: 0;
+}
+.slide-2 {
+  background: #a9785c;
+  left: 100%
+}
+.slide-3 {
+  background: #9ea6b3;
+  left: 200%
+}
+
+.slider {
+  display: grid;
+  justify-content: end;
+}
+.slider-content {
+  width: 100%;
+  position: relative;
+  top: 10em;
+}
+
+
+.arrows {
+  color: white;
+  height: 1em;
+  width: 2em;
+  position: absolute;
+  top: 10em;
+  left: 69%;
+}
+
+.fa-angle-right {
+  right: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #F46F32;
+}
+
+.fa-angle-right:hover {
+  color: white;
+  transform: scale(2);
+}
+
+.fa-angle-left {
+  cursor: pointer;
+  margin-right: 30%;
+  transition: all 0.2s;
+  color: #F46F32;
+}
+
+.fa-angle-left:hover {
+  color: white;
+  transform: scale(2);
+}
+
+.number {
+  position: relative;
+  left: 4.8em;
+}
+
+.brand {
+  position: relative;
+  right: 20%;
+}
+
+.sub-text {
+  color: white;
+  font-family: DIN-webfont;
+  font-size: 1.125em;
+  position: relative;
+  top: 1em;
+  left: 12%;
+}
+
+.underline{
+  border: 2px solid #F46F32;
+  width: 8em;
+  position: absolute;
+  left: 11.6em;
+  top: 19em;
+  border-radius: 4px;
+}
+
+/* Slider Inner Slide Effect */
+.slider h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.500em;
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: DIN-webfont;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+  margin-top: 0;
+  letter-spacing: 2px;
+}
+
+.slider h4 {
+  font-size: 3.500em;
+  font-family: DIN-webfont;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+}
+
+.slider > img {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+}
+
+.slide-1 > img {
+  right: 0;
+}
+
+
+/* Animations */
+.slider h2 {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1s; /* Safari */
+  transition-delay: 1s;
+}
+.slider h4 {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1.4s; /* Safari */
+  transition-delay: 1.4s;
+}
+.slider > img {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1.2s; /* Safari */
+  transition-delay: 1.2s;
+}
+
+/* Slider Pagger */
+/* .slider-pagination {
+  position: absolute;
+  bottom: 30px;
+  width: 575px;
+  left: 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.slider-pagination label {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+} */
+
+/* Slider Pagger Event */
+/* .slide-radio1:checked ~ .slider-pagination .page1,
+.slide-radio2:checked ~ .slider-pagination .page2,
+.slide-radio3:checked ~ .slider-pagination .page3 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ea2e49;
+  background: transparent;
+} */
+
+/* Slider Slide Effect */
+.slide-radio1:checked ~ .slider {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.slide-radio2:checked ~ .slider {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.slide-radio3:checked ~ .slider {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+
+.slide-radio1:checked ~ .slide-1 h2,
+.slide-radio2:checked ~ .slide-2 h2,
+.slide-radio3:checked ~ .slide-3 h2,
+.slide-radio1:checked ~ .slide-1 h4,
+.slide-radio2:checked ~ .slide-2 h4,
+.slide-radio3:checked ~ .slide-3 h4,
+.slide-radio1:checked ~ .slide-1 > img,
+.slide-radio2:checked ~ .slide-2 > img,
+.slide-radio3:checked ~ .slide-3 > img {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive */
+/* Portrait styles*/
+/* @media only screen and (max-width: 768px) {
+
+  .logo {
+    position: absolute;
+    left: 28px;
+    top: 50px;
+  }
+
+  .hamburger-menu {
+    top: 45px;
+    right: 4%;
+  }
+  .slider-content {
+    top: 32%;
+  }
+  .number {
+    position: absolute;
+    left: 73%;
+    bottom: 72%;
+  }
+  .brand {
+    top: 5em;
+    right: 2%;
+    font-size: ;
+  }
+
+  .sub-text {
+    top: 14.2em;
+    font-size: 15px;
+    left: 20%;
+  }
+
+  .arrows {
+    position: absolute;
+    top: 15%;
+    left: 72%;
+    width: 200px;
+  }
+
+  .underline {
+    left: 54%;
+    top: 50%;
+  }
+
+  .fas {
+    font-size: 2em;
+    margin-right: 15%;
+  }
+
+  .slider h2 {
+    font-size: 40px ;
+  }
+  .slider h4 {
+    font-size: 80px ;
+  }
+
+  .slider-content {
+
+  }
+
+  .navigation {
+
+  }
+
+
+  .number-pagination {
+    right: 2%;
+  }
+  .slider-pagination {
+    left: 2%;
+  }
+
+
+
+  .slider > img {
+
+  }
+
+  .slide-1 > img {
+
+  }
+
+} */
+
+@media only screen and (max-width: 1280px) and (max-height: 550px) {
+  .slider-content {
+    top: 20%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 490px) {
+  .slider-content {
+    top: 20%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 480px) {
+  .slider-content {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 480px) {
+  .slider-content {
+    right: 5%;
+  }
+  .slider h2 {
+    font-size: 40px;
+  }
+
+  .number {
+    left: 65%;
+  }
+
+  .underline {
+    left: 34%;
+    top: 67%;
+  }
+  .sub-text {
+    left: 0;
+    font-size: 16px;
+  }
+}
+
+
+/* portrait styles */
+
+
+
+@media only screen and (max-width: 530px) and (max-height: 490px) {
+  .slider-content {
+    top: 5%;
+  }
+}
+
+@media only screen and (max-width: 530px) and (max-height: 490px) {
+  .slider-content {
+    top: 5%;
+  }
+}
+
+@media only screen and (max-width: 530px) and (max-height: 550px) {
+  .slider-content {
+    top: 20%;
+  }
+}
+
+@media only screen and (max-width: 530px) and (max-height: 490px) {
+  .slider-content {
+    top: 5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+.logo {
+ left: 10%;
+ top: 60%;
+}
+
+.hamburger-menu {
+ right: 5%;
+}
+
+ .slider-content {
+   top: 15%;
+   left: 15%;
+ }
+
+ .number {
+   left: 65.5%;
+ }
+
+ .arrows {
+   font-size: 30px;
+   top: 30%;
+   left: 62%;
+ }
+ .slider h2 {
+   font-size: 42px;
+ }
+
+ .brand {
+   top: 4%;
+ }
+
+ .underline {
+   left: 35%;
+ }
+ .sub-text {
+   position: absolute;
+   right: 20%;
+   top: 55%;
+   font-size: 17px;
+ }
+
+}
+
+
+
+@media only screen and (max-width: 500px) and (max-height: 700px) {
+  .sub-text {
+    top: 50%;
+  }
+  .underline {
+    top: 47%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 670px) {
+  .underline {
+    top: 48%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 600px) {
+  .underline {
+    top: 54%;
+  }
+  .sub-text {
+    top: 55%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 550px) {
+  .sub-text {
+    top: 60%;
+  }
+  .underline {
+    top: 58%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 530px) {
+  .underline {
+    top: 58%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 510px) {
+  .underline {
+    top: 63%;
+  }
+  .sub-text {
+    top: 65%;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 450px) {
+  .underline {
+    top: 65%;
+  }
+}
+
+
+@media only screen and (max-width: 414px) and (max-height: 812px) {
+
+  .slider-content {
+    margin: 0;
+    left: 12%;
+  }
+
+  .number{
+    margin: 0;
+    top: 20%;
+    left: 64%;
+  }
+
+  .brand {
+    top: 30%;
+  }
+
+  .arrows {
+    left: 60.5%;
+    font-size: 2em;
+  }
+  .sub-text {
+    top: 50%;
+  }
+  .underline {
+    top: 48%;
+  }
+
+}
+
+@media only screen and (max-width: 414px) and (max-height: 680px) {
+  .sub-text {
+    top: 55%;
+  }
+
+  .underline {
+    top: 52%;
+  }
+
+}
+
+@media only screen and (max-width: 414px) and (max-height: 630px) {
+  .sub-text {
+    top: 55%;
+  }
+  .underline {
+    top: 52%;
+  }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 620px) {
+  .sub-text {
+    top: 54%;
+  }
+
+  .underline {
+    top: 52%;
+  }
+
+  .arrows {
+    top: 31%;
+  }
+
+}
+
+@media only screen and (max-width: 414px) and (max-height: 590px) {
+  .underline {
+    top: 53%;
+  }
+
+}
+
+
+
+/* landscape styles */
+@media only screen and (max-height: 480px) and (max-width: 900px) {
+  .underline {
+    top: 58%;
+  }
+
+}
+
+@media only screen and (max-height: 386px) and (max-width: 900px)  {
+  .slider-content {
+    right: 10%;
+    top: 0;
+  }
+  .slider h2 {
+    font-size: 2em;
+  }
+
+  .logo {
+    top: 20%;
+    left: 8%;
+  }
+
+  .hamburger-menu {
+    right: 2%;
+    top: 15%;
+  }
+
+  .brand {
+    left: 0;
+  }
+
+  .number {
+    left: 82%;
+
+  }
+
+  .arrows {
+    font-size: 2em;
+    top: 40%;
+    left: 75%;
+  }
+
+  .underline {
+    left: 45%;
+    top: 73%;
+  }
+
+  .sub-text {
+    left: 0;
+  }
+}
+
+/* @media only screen and (max-width: 900px) and (max-height: 480px) {
+  .underline {
+    top: 59%;
+  }
+  .arrows {
+    font-size: 2em;
+    top: 30%;
+    left: 61%;
+  }
+
+  .number {
+    left: 63.5%;
+  }
+}
+
+@media only screen and (max-width: 726px) and (max-height: 479px) {
+  .arrows {
+    font-size: 2em;
+    top: 35%;
+    left: 60%;
+  }
+  .number {
+    left: 63%;
+  }
+  .underline {
+    top: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 475px) {
+
+.underline {
+  top: 60%;
+}
+
+}
+
+
+@media only screen and (max-width: 900px) and (max-height: 470px) {
+  .underline {
+    top: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 460px) {
+
+  .underline {
+    top: 60%;
+  }
+  .arrows {
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 430px) {
+
+  .underline {
+    top: 65%;
+  }
+  .arrows {
+
+  }
+}
+
+
+
+
+@media only screen and (max-width: px) and (max-height: 590px) {
+
+} */
+
+
+
+/* @media only screen and (max-width: 500px) and (max-height: 667px) {
+  .underline {
+    top: 55%;
+  }
+
+  .arrows {
+    top: 27%;
+    left: 62%;
+  }
+
+  .sub-text {
+    top: 55%;
+  }
+
+} */
+
+
+/*iPhone 6, 7, & 8 Plus in landscape
+ @media only screen
+and (min-device-height : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+  .slider-content {
+    top: 15%;
+  }
+
+  .slider h2 {
+    font-size: 1.8em;
+  }
+
+  .logo {
+    left: 5%;
+    top: 40%;
+  }
+  .hamburger-menu {
+    right: 2%;
+  }
+  .number {
+    left: 74%;
+  }
+  .arrows{
+    font-size: 2em;
+    top: 35%;
+    left: 71%;
+  }
+  .brand {
+    font-size: 0.5em;
+    right: 10%;
+    margin-left: 58px;
+  }
+  .underline {
+    top: 65%;
+    left: 42%;
+  }
+  .sub-text {
+    top: 4%;
+    font-size: 0.9em;
+    position: relative;
+    margin-right: 5em;
+
+  }
+}
+*/
+
+/*iPhone 6, 7, & 8 Plus in portrait
+
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : portrait) {
+  .slider-content {
+    top: 10%;
+  }
+  .arrows{
+    top: 50%;
+  }
+
+  .sub-text {
+    top: 42%;
+  }
+  .underline {
+    top: 20%;
+  }
+  .brand {
+    top: 30%;
+    margin: 0;
+  }
+  .number {
+    left: 65%;
+    top: 10%;
+  }
+}*/
+
+
+/* iPhone 6, 7, & 8 in portrait
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+  .logo {
+    left: 10%;
+    top: 60%;
+  }
+
+  .hamburger-menu {
+    right: 5%;
+  }
+
+    .slider-content {
+      top: 15%;
+      left: 15%;
+    }
+
+    .number {
+      left: 65.5%;
+    }
+
+    .arrows {
+      font-size: 30px;
+      top: 30%;
+      left: 62%;
+    }
+    .slider h2 {
+      font-size: 42px;
+    }
+
+    .brand {
+      top: 4%;
+    }
+
+    .underline {
+      left: 35%;
+      top: 47%;
+    }
+    .sub-text {
+      position: absolute;
+      right: 20%;
+      top: 47%;
+      font-size: 17px;
+    }
+}*/
+
+/* iPhone 6, 7, & 8 in landscape
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation: landscape) {
+  .logo {
+    top: 40%;
+    left: 5%;
+  }
+  .hamburger-menu {
+    right: 5%;
+    top: 30%;
+  }
+  .slider-content {
+    top: 10%;
+  }
+  .slider h2 {
+    font-size: 2em;
+  }
+  .number {
+    left: 60%;
+  }
+
+  .brand {
+    right: 5%;
+  }
+
+  .arrows {
+    left: 57%;
+    font-size: 2em;
+    top: 40%;
+  }
+  .underline {
+    top: 70%;
+    left: 36%;
+  }
+  .sub-text {
+    font-size: 0.9em;
+    left: 5%;
+    position: absolute;
+    top: 72%;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Landscape styles*/
+/* @media only screen and (max-width: 768px) and (orientation: landscape) {
+  .slider-content {
+    top: 25%;
+    right: 10%;
+  }
+
+  .fas {
+    font-size: ;
+  }
+
+  .slider h2 {
+    font-size: 30px ;
+  }
+  .slider h4 {
+    font-size: 60px ;
+  }
+
+  .sub-text {
+    top: 47%;
+    left: 1%;
+  }
+  .brand {
+    top: 45%;
+  }
+
+  .number {
+    bottom: 55%;
+    left: 77%;
+  }
+
+  .arrows {
+    top: 31%;
+    font-size: ;
+  }
+
+  .underline {
+    top: 58%;
+    left: 40%;
+  }
+} */
