@@ -1,32 +1,20 @@
-@font-face {
-    font-family: 'DIN-Bold';
-    src: url('d-din-bold-webfont.woff2') format('woff2'),
-         url('d-din-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'DIN-Regular';
-    src: url('d-din-webfont.woff2') format('woff2'),
-         url('d-din-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
 .overlay-container{
   background-color: black;
   width: 100vw;
   min-height: 100vh;
   display: none;
 }
+
+.overlay-container-hide{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 /******************Navigation********************/
-.navigation{
+.overlay-container .navigation{
   background-color: white;
-  height: 40px;
+  height: 50px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
   padding-right: 86px;
