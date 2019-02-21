@@ -71,6 +71,8 @@
 .box{
   position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
+  
 }
 .img-background{
   width: 100%;
