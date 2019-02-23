@@ -3,13 +3,11 @@ const hamburgerMenu = $('.hamburger-menu');
 
 hamburgerMenu.click( function () {
   $(this).toggleClass('close');
+  $(".overlay-container").toggleClass('overlay-container-hide');
+  $(".logo").toggleClass('hide-main-content');
+  $(".css-slider-wrapper").toggleClass('hide-main-content');
 });
 
-//slider
-//var TIMEOUT = 6000;
-
-
-//var interval = setInterval(handleNext, TIMEOUT);
 
 function handleNext() {
 
