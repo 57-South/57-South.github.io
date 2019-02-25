@@ -6,6 +6,7 @@ hamburgerMenu.click( function () {
   $(".overlay-container").toggleClass('overlay-container-hide');
   $(".logo").toggleClass('hide-main-content');
   $(".css-slider-wrapper").toggleClass('hide-main-content');
+  $("body").toggleClass('unlocked');
 });
 
 
