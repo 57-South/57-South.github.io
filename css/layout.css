@@ -1,15 +1,21 @@
+body{
+  height:100vh;
+  width:100vw;
+  overflow: hidden;
+}
 .overlay-container{
   background-color: black;
   width: 100vw;
   min-height: 100vh;
-  display: none;
+  visibility: hidden;
 }
 
 .overlay-container-hide{
-  display: block;
+  visibility: visible;
   position: absolute;
   top: 0;
   right: 0;
+  overflow-y: scroll;
 }
 /******************Navigation********************/
 .overlay-container .navigation{
