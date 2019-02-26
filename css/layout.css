@@ -132,7 +132,7 @@
 
 
 /*Media Queries*/
-@media screen and (min-width: 1367px) and (max-width: 1920px){
+/*@media screen and (min-width: 1367px) and (max-width: 1920px){
   .overlay-navigation{
     height: 50px;
     font-size: 23px;
@@ -146,8 +146,8 @@
     height: 400px;
   }
 }
-
-@media screen and (max-width: 1366px) {
+*/
+/*@media screen and (max-width: 1366px) {
   .box-container{
     grid-template-columns: repeat(3,33.33vw);
     grid-gap: 0;
@@ -157,30 +157,31 @@
     width: 33.33vw;
     height: 350px;
   }
-}
+}*/
 /****Less Then 750px****/
 @media screen and (max-width: 750px) {
-  .overlay-navigation{
-    grid-template-columns: 1fr;
-    padding: 0;
-    background-color:#FFF;
-  }
+
   .link-list{
     width: 100%;
     padding: 0;
     grid-column: 1;
     text-align: center;
   }
-  .box-container{
-    grid-template-columns: repeat(2,50vw);
-    grid-auto-rows: 300px;
-  }
-  .box{
-    width: 50vw;
-    height: 300px;
-  }
 }
 
+
+@media screen and (max-width: 1440px){
+    .box{
+      width: 33.33vw;
+      height: 350px;
+    }
+}
+@media screen and (max-width: 1028px){
+    .box{
+      width: 33.33vw;
+      height: 300px;
+    }
+}
 
 @media screen and (max-width: 768px){
   .overlay-container .overlay-navigation{
