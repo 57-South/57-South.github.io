@@ -1,11 +1,11 @@
 // initialize IIFE
 
 
-const $grid = $('.box-container').isotope({
-  itemSelector: '.box',
-  layoutMode: 'fitRows',
-  percentPosition: true
-});
+// const $grid = $('.box-container').isotope({
+//   itemSelector: '.box',
+//   layoutMode: 'fitRows',
+//   percentPosition: true
+// });
 
 function clear(){
     $(".link-list li a").removeAttr("style");
