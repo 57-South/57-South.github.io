@@ -147,7 +147,7 @@ body{
   }
   .box-container{
     grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: 20vw;
+    grid-auto-rows: 23vw;
   }
   .title{
     font-size: 30px;
