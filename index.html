@@ -2,20 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>57 South</title>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <meta name="robots" content="noindex,follow" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
 
-  <body class="locked">
+  <body>
     <!-- Containter For Main Content -->
     <div class="main-content">
          <!-- Navigation -->
@@ -88,82 +85,87 @@
 
 <!-- HTML OVERLAY -->
   <div class="overlay-container">
-    <div class="overlay-navigation">
+    <nav class="overlay-navigation">
       <ul class="link-list">
-        <li class="link" id="all"><a class="link-all" href="#all" style="border-bottom: 4px solid #F46F32;">All</a></li>
-        <li class="link" id="profiles"><a class="link-profiles" href="#profiles">Profiles</a></li>
-        <li class="link" id="insights"><a class="link-insights" href="#insights">Insights</a></li>
-        <li class="link" id="work"><a class="link-work" href="#work">Work</a></li>
+        <li class="link" data-filter="all" id="all"><a class="link-all" href="#all" style="border-bottom: 4px solid #F46F32;">All</a></li>
+        <li class="link" data-filter=".profiles" id="profiles"><a class="link-profiles" href="#profiles">Profiles</a></li>
+        <li class="link" data-filter=".insights" id="insights"><a class="link-insights" href="#insights">Insights</a></li>
+        <li class="link" data-filter=".work" id="work"><a class="link-work" href="#work">Work</a></li>
       </ul>
+    </nav>
+    <div class="hamburger-menu overlay-hambuger-menu">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
     </div>
     <div class="box-container">
-        <div class="box all profiles">
+        <div class="mix box all profiles">
           <img class="img-background" src="img/cold-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all insights">
+        <div class="mix box all insights">
           <img class="img-background" src="img/drive-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all work">
+        <div class="mix box all work">
           <img class="img-background" src="img/fire-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all insights">
+        <div class="mix box all insights">
           <img class="img-background" src="img/gig-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all work">
+        <div class="mix box all work">
           <img class="img-background" src="img/guitar-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all profiles">
+        <div class="mix box all profiles">
           <img class="img-background" src="img/guy-staring-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all profiles">
+        <div class="mix box all profiles">
           <img class="img-background" src="img/magician-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all insights">
+        <div class="mix box all insights">
           <img class="img-background" src="img/make-up-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all work">
+        <div class="mix box all work">
           <img class="img-background" src="img/puch-me-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all insights">
+        <div class="mix box all insights">
           <img class="img-background" src="img/guitar-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all work">
+        <div class="mix box all work">
           <img class="img-background" src="img/sadness-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
           <p class="text by-line">Example by line</p>
         </div>
-        <div class="box all profiles">
+        <div class="mix box all profiles">
           <img class="img-background" src="img/sunset-640x426.jpg">
           <div class="overlay"></div>
           <p class="text title">Example Title</p>
@@ -176,7 +178,7 @@
 
 <!-- HTML OVERLAY -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/mixitup.js" charset="utf-8"></script>
   <script src="/js/main.js" charset="utf-8"></script>
 <script src="/js/layout.js" type="text/javascript" charset="utf-8"></script>
   </body>
