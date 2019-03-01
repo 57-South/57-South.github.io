@@ -82,7 +82,7 @@ body{
   height: 100vh;
   display: grid;
   position:fixed;
-  top: 0;
+  top: 40px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
