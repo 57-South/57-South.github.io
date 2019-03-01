@@ -2,11 +2,9 @@
 const hamburgerMenu = $('.hamburger-menu');
 
 hamburgerMenu.click( function () {
-  $(this).toggleClass('close');
-  $(".overlay-container").toggleClass('overlay-container-hide');
-  $(".logo").toggleClass('hide-main-content');
-  $(".css-slider-wrapper").toggleClass('hide-main-content');
-  $("body").toggleClass('unlocked');
+  $(".hamburger-menu").toggleClass('close');
+  $(".overlay-container").toggleClass('show-overlay-container');
+  $(".main-content").toggleClass('hide-main-content');
 });
 
 
