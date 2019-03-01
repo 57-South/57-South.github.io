@@ -3,8 +3,8 @@ const hamburgerMenu = $('.hamburger-menu');
 
 hamburgerMenu.click( function () {
   $(".hamburger-menu").toggleClass('close');
-  // $(".overlay-container").toggleClass('overlay-container-hide');
-  // $(".main-content").toggleClass('hide-main-content');
+  $(".overlay-container").toggleClass('show-overlay-container');
+  $(".main-content").toggleClass('hide-main-content');
 });
 
 
